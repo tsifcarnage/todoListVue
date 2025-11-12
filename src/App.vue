@@ -1,6 +1,9 @@
 <script>
-import HelloWorld from "./components/todoList.vue";
+import Todo from "./components/Todo.vue";
 export default {
+  components: {
+    Todo,
+  },
   data() {
     return {
       nom: "",
@@ -31,6 +34,7 @@ export default {
     <h4 v-else class="text-green-800 text-center text-3xl">
       Bonjour {{ nom }}
     </h4>
+    <Todo />
   </div>
 </template>
 
@@ -38,5 +42,6 @@ export default {
 .nameForm {
   text-align: center;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 </style>
