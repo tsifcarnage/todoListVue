@@ -3,8 +3,8 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <div class="">
-    <h1 class="text-lg text-amber-800">Hello world</h1>
+  <div class="card bg-base-100 w-96 shadow-sm">
+    <HelloWorld></HelloWorld>
     <button class="btn btn-accent px-5 py-1">hey</button>
   </div>
 </template>
