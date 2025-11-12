@@ -21,7 +21,7 @@ export default {
 <template>
   <div>
     <h1 class="m-2 text-center text-5xl text-red-700">Veille todoList</h1>
-    <h4 class="nameForm" v-if="hiding === false">
+    <h4 class="nameForm mt-5" v-if="hiding === false">
       Bonjour:
       <input
         @keyup.enter="submit"
