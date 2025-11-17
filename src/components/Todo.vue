@@ -19,7 +19,7 @@
       v-for="(task, index) in tasks"
       :key="index"
     >
-      <li class="self-center">{{ task }}</li>
+      <li class="self-center">$ {{ task }}</li>
       <button @click="delUser(index)" class="btn btn-error">Supprimer</button>
     </ul>
   </div>
