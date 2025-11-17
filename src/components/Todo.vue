@@ -11,6 +11,7 @@
         type="text"
         name="tache"
         placeholder="Nouvelle tache"
+        required
       />
       <button class="btn btn-accent" type="submit">Ajouter</button>
     </form>
