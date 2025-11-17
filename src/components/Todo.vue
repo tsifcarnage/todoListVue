@@ -14,15 +14,13 @@
       />
       <button class="btn btn-accent" type="submit">Ajouter</button>
     </form>
-    <ul>
-      <li
-        class="text-center text-lg"
-        v-for="(task, index) in tasks"
-        :key="index"
-      >
-        <hr class="my-4" />
-        - {{ task }}
-      </li>
+    <ul
+      class="bg-base-200 my-2 p-2 flex justify-between gap-2 text-center text-lg"
+      v-for="(task, index) in tasks"
+      :key="index"
+    >
+      <li class="self-center">{{ task }}</li>
+      <button @click="delUser(index)" class="btn btn-error">Supprimer</button>
     </ul>
   </div>
 </template>
@@ -38,6 +36,10 @@ export default {
   methods: {
     addUser() {
       this.tasks.push(this.add);
+      this.add = "";
+    },
+    delUser(index) {
+      this.tasks = this.tasks.filter((_, taskid) => taskid != index);
       this.add = "";
     },
   },

@@ -31,9 +31,7 @@ export default {
         placeholder="Votre nom"
       />
     </h4>
-    <h4 v-else class="text-green-800 text-center text-3xl">
-      Bonjour {{ nom }}
-    </h4>
+    <h4 v-else class="text-info text-center text-3xl">Bonjour {{ nom }}</h4>
     <Todo />
   </div>
 </template>
