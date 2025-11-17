@@ -21,7 +21,10 @@
       :key="index"
     >
       <li class="self-center">$ {{ task }}</li>
-      <button @click="delUser(index)" class="btn btn-error">Supprimer</button>
+      <div>
+        <button class="btn btn-success mr-2">Tache fini</button>
+        <button @click="delUser(index)" class="btn btn-error">Supprimer</button>
+      </div>
     </ul>
   </div>
 </template>
