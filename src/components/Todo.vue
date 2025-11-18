@@ -25,7 +25,7 @@
         class="bg-base-200 my-2 p-2 flex justify-between gap-2 text-center text-lg"
         :class="{ 'bg-green-600 text-black': task.ending }"
       >
-        <li class="self-center">$ {{ task.text }}</li>
+        <li class="self-center">$ {{ capitalize(task.text) }}</li>
         <div>
           <button
             v-if="task.ending"
@@ -47,7 +47,15 @@
 </template>
 
 <script>
+import { capitalize } from "vue";
+
 export default {
+  props: {
+    capitalize: {
+      type: Function,
+      required: true,
+    },
+  },
   data() {
     return {
       add: "",

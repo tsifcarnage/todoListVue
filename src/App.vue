@@ -1,6 +1,7 @@
 <script>
 import Todo from "./components/Todo.vue";
 import Themes from "./components/Themes.vue";
+import { capitalize } from "vue";
 export default {
   components: {
     Todo,
@@ -15,6 +16,10 @@ export default {
   methods: {
     submit() {
       this.hiding = true;
+    },
+    capitalize(str) {
+      if (str.length === 0) return str;
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     },
   },
 };
@@ -37,8 +42,10 @@ export default {
         placeholder="Votre nom"
       />
     </h4>
-    <h4 v-else class="text-info text-center text-3xl">Bonjour {{ nom }}</h4>
-    <Todo />
+    <h4 v-else class="text-info text-center text-3xl">
+      Bonjour {{ capitalize(nom) }}
+    </h4>
+    <Todo :capitalize="capitalize" />
   </div>
 </template>
 
