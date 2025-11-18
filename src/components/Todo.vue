@@ -22,11 +22,11 @@
     </form>
     <ul v-for="(task, index) in tasks" :key="index">
       <section
-        class="bg-base-200 my-2 p-2 flex justify-between gap-2 text-center text-lg"
+        class="bg-base-200 my-2 p-2 flex flex-wrap justify-between max-sm:justify-around gap-2 text-center text-lg"
         :class="{ 'bg-green-600 text-black': task.ending }"
       >
         <li class="self-center">$ {{ capitalize(task.text) }}</li>
-        <div>
+        <div class="flex flex-wrap gap-2">
           <button
             v-if="task.ending"
             @click="backTask(index)"
