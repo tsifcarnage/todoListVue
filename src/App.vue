@@ -1,10 +1,10 @@
 <script>
 import Todo from "./components/Todo.vue";
-import Theme from "./components/Theme.vue";
+import Themes from "./components/Themes.vue";
 export default {
   components: {
     Todo,
-    Theme,
+    Themes,
   },
   data() {
     return {
@@ -25,7 +25,7 @@ export default {
     <div class="flex justify-between px-3">
       <div></div>
       <h1 class="m-2 text-center text-5xl text-red-700">Veille todoList</h1>
-      <Theme class="self-center" />
+      <Themes class="self-center" />
     </div>
     <h4 class="nameForm mt-5" v-if="hiding === false">
       Bonjour:
