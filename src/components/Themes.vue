@@ -139,21 +139,19 @@
 export default {
   data() {
     return {
-      isChecked: false, // Valeur initiale, 0 pour mode clair, 1 pour mode sombre
+      isChecked: false,
     };
   },
   methods: {
     toggleTheme() {
-      // Lorsque l'utilisateur clique sur la switch, on bascule entre les thèmes
       if (this.isChecked) {
-        document.documentElement.setAttribute("data-theme", "dark"); // Bascule vers le mode sombre
+        document.documentElement.setAttribute("data-theme", "dark");
       } else {
-        document.documentElement.setAttribute("data-theme", "light"); // Bascule vers le mode clair
+        document.documentElement.setAttribute("data-theme", "light");
       }
     },
   },
   mounted() {
-    // Initialiser le thème au premier chargement (mode clair par défaut)
     document.documentElement.setAttribute("data-theme", "light");
   },
 };
