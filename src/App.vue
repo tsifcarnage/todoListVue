@@ -27,10 +27,10 @@ export default {
 
 <template>
   <div>
-    <div class="flex justify-between px-3">
+    <div class="flex flex-wrap justify-between px-3">
       <div></div>
       <h1 class="m-2 text-center text-5xl text-red-700">Veille todoList</h1>
-      <Themes class="self-center" />
+      <Themes class="self-center phone" />
     </div>
     <h4 class="nameForm mt-5" v-if="hiding === false">
       Bonjour:
@@ -50,6 +50,11 @@ export default {
 </template>
 
 <style scoped>
+@media (max-width: 418px) {
+  .phone {
+    margin: auto;
+  }
+}
 .nameForm {
   text-align: center;
   font-size: 1.2rem;
