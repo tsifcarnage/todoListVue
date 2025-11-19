@@ -108,6 +108,27 @@
 }
 </style>
 
+<script>
+export default {
+  data() {
+    return {
+      isChecked: false,
+    };
+  },
+  methods: {
+    toggleTheme() {
+      if (this.isChecked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    },
+  },
+  mounted() {
+    document.documentElement.setAttribute("data-theme", "light");
+  },
+};
+</script>
 <template>
   <label class="switch">
     <span class="sun"
@@ -134,25 +155,3 @@
     <span class="slider"></span>
   </label>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      isChecked: false,
-    };
-  },
-  methods: {
-    toggleTheme() {
-      if (this.isChecked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
-    },
-  },
-  mounted() {
-    document.documentElement.setAttribute("data-theme", "light");
-  },
-};
-</script>
